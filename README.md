@@ -1,8 +1,6 @@
 # raytracing
 
-https://github.com/dptorri/raytracing
-
-Several raytracing concepts and examples
+Several raytracing concepts and examples based on the great work of https://github.com/ssloy/tinyraytracer
 
 #### Add CMakeLists
 
