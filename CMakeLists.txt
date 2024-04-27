@@ -24,5 +24,6 @@ enable_cxx_compiler_flag_if_supported("-fopenmp")
 file(GLOB SOURCES *.h *.cpp)
 
 add_executable(${PROJECT_NAME} ${SOURCES}
-        geometry.h)
+        geometry.h
+        raytracing.cpp)
 
