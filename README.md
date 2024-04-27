@@ -16,3 +16,13 @@ This is a `CMakeLists.txt` file for the "raytracer" project. Let's step through 
 * `file(GLOB SOURCES *.h *.cpp)`: Uses a glob pattern to include all `.h` header and `.cpp` source files in the build.
 * `add_executable(${PROJECT_NAME} ${SOURCES})`: Tells CMake to create an executable with the name of the project ("raytracer") using the source files defined before.
 
+#### Geometry Header 
+
+`geometry.h` header file provides functionality for working with vectors of different dimensions.
+- **Guarding Against Multiple Inclusions**: The file starts with include guards (`#ifndef`, `#define`, `#endif`) to prevent multiple inclusions in the same translation unit.
+- **Includes**: Standard library headers such as `<cmath>`, `<vector>`, `<cassert>`, and `<iostream>` are included.
+- **Constants**: Constants are defined for dimensions 2, 3, and 4 (`DIM2`, `DIM3`, `DIM4`).
+- **Generic Vector Struct (`vec`)**: A templated struct `vec` is defined to represent vectors of arbitrary dimensions. It provides functionality for creating and accessing vector elements.
+- **Specializations for 2D, 3D, and 4D Vectors**: Specializations of `vec` are provided for 2D, 3D, and 4D vectors, each with their own set of constructors and element accessors.
+- **Element Access**: Overloaded `operator[]` functions are provided to access vector elements using square brackets (`[]`). Bounds checking is performed using `assert` to ensure index validity.
+- **Member Variables**: Inside the specializations, each vector struct contains member variables (`x`, `y`, `z`, `w`) representing vector components.
